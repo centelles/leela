@@ -302,7 +302,7 @@ class Attachment(models.Model):
     """
     entry = models.ForeignKey('EmailEntry', related_name='attachments')
     attached_file = models.FileField(upload_to=get_attachment_filename)
-    content_type = models.CharField(max_length=50)
+    content_type = models.CharField(max_length=255)
     name = models.CharField(max_length=100)
 
 
